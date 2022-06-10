@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="78bc6645-0276-4eb8-85a2-458090e5562c" name="Changes" comment="feat: config files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/linkedinScript/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/linkedinScript/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/linkedinScript/SystemUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/linkedinScript/SystemUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resource/output.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/output.Json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/linkedinScript/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/linkedinScript/AppTest.java" afterDir="false" />
@@ -186,16 +184,5 @@
     <MESSAGE value="feat: start project with some config files" />
     <MESSAGE value="feat: config files" />
     <option name="LAST_COMMIT_MESSAGE" value="feat: config files" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/linkedinScript/AppTest.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

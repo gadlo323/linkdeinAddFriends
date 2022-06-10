@@ -69,7 +69,7 @@ public class AppTest
             for (WebElement element : resultConnection) {
                 if(FRIENDS_TO_ADD > 0){
                     String profileName = element
-                            .findElement(By.xpath(".//*[contains(@class='discover-person-card__name')]")).getText();
+                            .findElement(By.xpath(".//*[contains(@class,'t-black')]")).getText();
                     String workplace = element
                             .findElement(By.xpath(".//*[contains(@class,'discover-person-card__occupation')]")).getText();
                     String profileImg = element
@@ -86,7 +86,7 @@ public class AppTest
 
 
                     JSONObject linkedinObj = new JSONObject();
-                    linkedinObj.put("connection", connectionInfo);
+                    linkedinObj.put("requestTo", connectionInfo);
                     connectionsList.put(linkedinObj);
 //                    connectButton.click();
                     index++;
