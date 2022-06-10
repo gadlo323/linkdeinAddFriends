@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78bc6645-0276-4eb8-85a2-458090e5562c" name="Changes" comment="feat: start project with some config files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="78bc6645-0276-4eb8-85a2-458090e5562c" name="Changes" comment="feat: config files">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/linkedinScript/SystemUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/linkedinScript/SystemUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +18,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,7 +84,13 @@
       <option name="presentableId" value="LOCAL‎00002" />
       <updated>1654875196912</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL‎00003" summary="feat: config files">
+      <created>1654875927051</created>
+      <option name="number" value="LOCAL‎00003" />
+      <option name="presentableId" value="LOCAL‎00003" />
+      <updated>1654875927051</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -90,7 +98,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -98,6 +118,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: start project with some config files" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: start project with some config files" />
+    <MESSAGE value="feat: config files" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: config files" />
   </component>
 </project>
