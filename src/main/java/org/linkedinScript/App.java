@@ -25,8 +25,8 @@ public class App
     public static void main( String[] args )
     {
         final String URL_TO_CONNECT = "https://www.linkedin.com/home";
-        final String LINKEDIN_USER = SystemUtil.LINKEDIN_USER;
-        final String LINKEDIN_PASSWORD = SystemUtil.LINKEDIN_USER;
+        final String LINKEDIN_USER = SystemUtil.LINKEDIN_USER; //Your user here
+        final String LINKEDIN_PASSWORD = SystemUtil.LINKEDIN_USER; // Your password here
         int FRIENDS_TO_ADD = 3;
         WebDriver driver = null;
         try {
