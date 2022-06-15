@@ -10,14 +10,14 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Unit test for simple App.
@@ -29,7 +29,9 @@ public class AppTest
     final static String URL_TO_CONNECT = "https://www.linkedin.com/home";
     final static String LINKEDIN_USER = SystemUtil.LINKEDIN_USER; //Your user here
     final static String LINKEDIN_PASSWORD = SystemUtil.LINKEDIN_PASSWORD; // Your password here
-    static int  FRIENDS_TO_ADD = 3;
+    static int  FRIENDS_TO_ADD = 204; // Chane here amount off new connects you want
+
+    static List<WebElement> resultConnection ;
 
     @BeforeClass
     public static void beforeClassFunction(){
@@ -61,17 +63,27 @@ public class AppTest
             wait.until(ExpectedConditions.presenceOfElementLocated(By.id("discover-cohort-recommendations-modal__title")));
 
 
-            List<WebElement> resultConnection = driver.findElements(By.xpath("//li[contains(@class,'ember-view')]"));
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            resultConnection = driver.findElements(By.xpath("//div[contains(@class,'artdeco-modal__content')]//li[contains(@class,'ember-view')]"));
+            WebElement lastElement = resultConnection.get(resultConnection.size()-1);
+        while(  FRIENDS_TO_ADD  >= resultConnection.size()){
+                 lastElement.sendKeys("");
+                 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+                 resultConnection = driver.findElements(By.xpath("//div[contains(@class,'artdeco-modal__content')]//li[contains(@class,'ember-view')]"));
+                 lastElement = resultConnection.get(resultConnection.size()-1);
+            }
              LOG.info("Found " + resultConnection.size() + " new friends to connect with. ");
 
-            int index = 0;
             JSONArray connectionsList = new JSONArray();
             for (WebElement element : resultConnection) {
                 if(FRIENDS_TO_ADD > 0){
+                    String id = element.getAttribute("id");
                     String profileName = element
-                            .findElement(By.xpath(".//*[contains(@class,'t-black')]")).getText();
-                    String workplace = element
-                            .findElement(By.xpath(".//*[contains(@class,'discover-person-card__occupation')]")).getText();
+                            .findElement(By.className("discover-person-card__name")).getAttribute("innerText");
+                    String title = element
+                            .findElement(By.className("discover-person-card__occupation")).getAttribute("innerText");
+                    String profileLInk = element
+                            .findElement(By.xpath(".//*[contains(@class,'discover-entity-type-card__link')]")).getAttribute("href");
                     String profileImg = element
                             .findElement(By.xpath(".//*[contains(@class,'discover-entity-type-card__image-circle')]")).getAttribute("src");
                     WebElement connectButton = element
@@ -79,22 +91,22 @@ public class AppTest
 
                     // Creating a JSONObject object
                     JSONObject connectionInfo = new JSONObject();
-                    connectionInfo.put("id", index);
+                    connectionInfo.put("id", id);
                     connectionInfo.put("name", profileName);
-                    connectionInfo.put("profileImg", profileImg);
-                    connectionInfo.put("workPlace", workplace);
+                    connectionInfo.put("profile_img", profileImg);
+                    connectionInfo.put("title", title);
+                    connectionInfo.put("profile_link", profileLInk);
 
 
                     JSONObject linkedinObj = new JSONObject();
-                    linkedinObj.put("requestTo", connectionInfo);
+                    linkedinObj.put("requestSendTo", connectionInfo);
                     connectionsList.put(linkedinObj);
-//                    connectButton.click();
-                    index++;
+                    connectButton.click(); //click on connect button to send request
                     FRIENDS_TO_ADD--;
                 }else break;
 
             }
-            Helper.writeToFile(connectionsList,"output.Json");
+            Helper.writeToFile(connectionsList,"ToWhomDidISend.Json");//Save as a file all the profiles to which I have sent a membership request
             driver.quit();
 
     }

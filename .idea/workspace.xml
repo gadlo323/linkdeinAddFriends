@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78bc6645-0276-4eb8-85a2-458090e5562c" name="Changes" comment="feat: config files">
+    <list default="true" id="78bc6645-0276-4eb8-85a2-458090e5562c" name="Changes" comment="feat: adding Logs info">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/linkedinScript/SystemUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/linkedinScript/SystemUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/output.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/output.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resource/output.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/ToWhomDidISend.Json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/linkedinScript/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/linkedinScript/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +154,13 @@
       <option name="presentableId" value="LOCAL‎00005" />
       <updated>1654877111707</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL‎00006" summary="feat: adding Logs info">
+      <created>1654883382399</created>
+      <option name="number" value="LOCAL‎00006" />
+      <option name="presentableId" value="LOCAL‎00006" />
+      <updated>1654883382399</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,6 +189,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: start project with some config files" />
     <MESSAGE value="feat: config files" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: config files" />
+    <MESSAGE value="feat: adding Logs info" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: adding Logs info" />
   </component>
 </project>
